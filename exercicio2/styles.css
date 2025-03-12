@@ -1,0 +1,7 @@
+.foto-perfil {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Aplica o arredondamento circular na imagem */
+    object-fit: cover;
+    margin-bottom: 20px;
+}
