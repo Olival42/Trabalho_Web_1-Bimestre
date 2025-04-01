@@ -1,0 +1,117 @@
+/* Estilos gerais */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1E1E2E;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 20px;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+/* Título */
+h1 {
+    color: #00ADB5;
+}
+
+/* Galeria */
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 15px;
+    justify-items: center;
+    margin-top: 20px;
+    max-width: 1000px;
+    width: 100%;
+}
+
+/* Miniaturas das imagens */
+.miniatura {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Efeito de expandir a imagem */
+.miniatura:hover {
+    transform: scale(1.05);
+}
+
+/* Estilo do Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+/* Exibição do Modal ao clicar na imagem */
+.modal-toggle:checked + .modal {
+    display: flex;
+}
+
+/* Modal conteúdo (imagem ampliada) */
+.modal-conteudo {
+    max-width: 80%;
+    max-height: 80%;
+    border-radius: 10px;
+}
+
+/* Fechar o modal com o 'X' */
+.modal-close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+/* Efeito ao passar o mouse sobre o botão de fechar */
+.modal-close:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Evitar que o clique na imagem (dentro do modal) feche a tela */
+.modal-conteudo:hover {
+    pointer-events: auto;
+}
+
+/* Faz a galeria centralizar as imagens */
+.item {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Estilo para o título e parágrafo */
+p {
+    color: #5F27CD;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Estilo para o checkbox escondido que controla o modal */
+.modal-toggle {
+    display: none;
+}
+
+/* Aumentando a área de clique para fechar (clicar no fundo do modal) */
+.modal {
+    cursor: pointer;
+}
