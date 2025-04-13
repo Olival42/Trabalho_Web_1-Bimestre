@@ -1,18 +1,58 @@
-h1 {
-    color: #ff9800;
-    text-align: center;
-}
-
-p {
-    color: #A67C52;
-    font-size: 20px;
+* {
+    padding: 0;
+    margin: 0;
 }
 
 body {
-    background-image: url('golden-retriever.png');
+    font-family: Arial;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 110vh;
-    margin: 0;
+    height: 90vh;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1 {
+    text-align: center;
+    color: rgb(37, 43, 80);
+    margin-top: 30px;
+}
+
+p {
+    text-align: center;
+    font-size: 1.2em;
+    color: #6a59c0;
+    font-weight: bold;
+}
+
+ul.butoes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    flex-wrap: nowrap;
+}
+
+ul.butoes li {
+    display: inline-block;
+    margin: 30px;
+}
+
+ul.butoes li a {
+    color: #fff;
+    width: 100%;
+    padding: 15px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 15px;
+    background-color: #3498db;
+    cursor: pointer;
+}
+
+ul.butoes li a:hover {
+    background-color: #2980b9;
 }
