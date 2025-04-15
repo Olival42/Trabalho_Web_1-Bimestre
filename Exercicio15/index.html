@@ -8,49 +8,71 @@
 </head>
 
 <body>
+
     <header>
-        <h1>Em breve: Nosso Novo Produto Incrível!</h1>
-        <p>Lançamento em:</p>
-        <time datetime="2025-05-01T00:00:00">00 dias 00h 00min 00s</time>
+        <h1>Lançamento do Produto</h1>
+        <p>Contagem regressiva para o lançamento:</p>
+        <time datetime="2025-05-01">01/05/2025</time>
+
+        <div class="timer">
+            <div class="number n10">10</div>
+            <div class="number n9">9</div>
+            <div class="number n8">8</div>
+            <div class="number n7">7</div>
+            <div class="number n6">6</div>
+            <div class="number n5">5</div>
+            <div class="number n4">4</div>
+            <div class="number n3">3</div>
+            <div class="number n2">2</div>
+            <div class="number n1">1</div>
+        </div>
     </header>
 
-    <section class="container-flex">
-        <div class="carrossel">
-            <div class="slides">
-                <img src="celular1.png" alt="Imagem 1">
-                <img src="celular2.png" alt="Imagem 2">
-                <img src="celular3.png" alt="Imagem 3">
-            </div>
-        </div>
+    <section class="carousel">
+        <input type="radio" name="slide" id="slide1" checked>
+        <label for="slide1"></label>
+        <img src="celular1.png" alt="Produto 1">
 
-        <div class="formulario">
-            <h2>Pré-Venda</h2>
-            <form>
-                <label>Nome completo:</label><br>
-                <input type="text" id="nome"><br><br>
+        <input type="radio" name="slide" id="slide2">
+        <label for="slide2"></label>
+        <img src="celular2.png" alt="Produto 2">
 
-                <label>E-mail:</label><br>
-                <input type="email" id="email"><br><br>
-
-                <label>Telefone:</label><br>
-                <input type="text" id="telefone"><br><br>
-
-                <button type="submit">Quero Reservar!</button>
-            </form>
-        </div>
+        <input type="radio" name="slide" id="slide3">
+        <label for="slide3"></label>
+        <img src="celular3.png" alt="Produto 3">
     </section>
 
-    <section id="descricao">
+    <div class="carousel-controls">
+        <label for="slide1"></label>
+        <label for="slide2"></label>
+        <label for="slide3"></label>
+    </div>
+
+    <section class="features">
         <h2>Recursos Destacados</h2>
         <ul>
-            <li>Armazenamento Interno de 256GB</li>
-            <li>Memória RAM de 8GB</li>
-            <li>Tamanho da Tela de 6.7</li>
-            <li>Resolução da Câmera Traseira de 50MP</li>
-            <li>Resolução da Câmera Frontal de 13MP</li>
-            <li>Capacidade da Bateria de 5000 mAh</li>
+            <li>🔋 Longa duração da bateria</li>
+            <li>📱 Design moderno e intuitivo</li>
+            <li>📦 Envio grátis para todo o Brasil</li>
+            <li>🛡 Garantia estendida de 1 ano</li>
         </ul>
     </section>
+
+    <section class="pre-order">
+        <h2>Faça sua Pré-Venda</h2>
+        <form>
+            <input type="text" placeholder="Seu nome" required>
+            <input type="email" placeholder="Seu e-mail" required>
+            <textarea placeholder="Mensagem (opcional)"></textarea>
+            <button type="submit">Reservar Agora</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Sua Marca. Todos os direitos reservados.</p>
+    </footer>
+
+
 </body>
 
 </html>
