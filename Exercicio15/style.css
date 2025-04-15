@@ -10,13 +10,13 @@ body {
 }
 
 header,
-.features,
+.destaques,
 footer {
     background: #2d3e50;
+    text-align: center;
 }
 
 header {
-    text-align: center;
     padding: 50px 20px 20px;
     margin-bottom: 20px;
 }
@@ -24,6 +24,11 @@ header {
 header h1 {
     font-size: 3rem;
     margin-bottom: 10px;
+}
+
+time {
+    font-size: 2rem;
+    color: #ff0000;
 }
 
 .timer {
@@ -41,7 +46,13 @@ header h1 {
     left: 50%;
     transform: translateX(-50%);
     opacity: 0;
-    animation: fall 1s linear both;
+    animation: pulse 1s linear both;
+}
+
+@keyframes pulse {
+    50% {
+        opacity: 0.5;
+    }
 }
 
 .n10 {
@@ -84,33 +95,12 @@ header h1 {
     animation-delay: 9s;
 }
 
-@keyframes fall {
-    0% {
-        transform: translateX(-50%) translateY(-100px);
-        opacity: 0;
-    }
-
-    30% {
-        opacity: 1;
-    }
-
-    50% {
-        transform: translateX(-50%) translateY(0);
-        opacity: 1;
-    }
-
-    80% {
-        transform: translateX(-50%) translateY(50px);
-        opacity: 0.8;
-    }
-
-    100% {
-        transform: translateX(-50%) translateY(100px);
-        opacity: 0;
-    }
+h3,
+.pre-venda h2 {
+    color: #2c3e50;
 }
 
-.carousel {
+.carrossel {
     display: flex;
     overflow: hidden;
     width: 100%;
@@ -120,7 +110,7 @@ header h1 {
     box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
 }
 
-.carousel img {
+.carrossel img {
     width: 100%;
     display: none;
 }
@@ -129,13 +119,13 @@ input[name="slide"]:checked+label+img {
     display: block;
 }
 
-.carousel-controls {
+.carrossel-controle {
     display: flex;
     justify-content: center;
     margin: 10px 0;
 }
 
-.carousel-controls label {
+.carrossel-controle label {
     width: 20px;
     height: 20px;
     background: #555;
@@ -145,7 +135,7 @@ input[name="slide"]:checked+label+img {
 }
 
 button:hover,
-.carousel-controls label:hover {
+.carrossel-controle label:hover {
     opacity: 0.8;
 }
 
@@ -153,33 +143,28 @@ input[type="radio"] {
     display: none;
 }
 
-.features {
+.destaques,
+.pre-venda {
     padding: 50px 20px;
-    text-align: center;
 }
 
-.features h2 {
+.destaques h2 {
     margin-bottom: 30px;
 }
 
-.features ul {
+.destaques ul {
     list-style: none;
 }
 
-.features li {
+.destaques li {
     margin: 10px 0;
     font-size: 1.2rem;
 }
 
-.pre-order {
-    padding: 50px 20px;
-    text-align: center;
-}
-
-.pre-order h2 {
+.pre-venda h2 {
     margin-bottom: 20px;
-    color: #2c3e50;
     font-size: 2rem;
+    text-align: center;
 }
 
 form {
@@ -215,25 +200,26 @@ button {
     border-radius: 5px;
     font-size: 1rem;
     font-weight: bold;
-    background-color: #3498db;
+    background-color: #2c6185;
     cursor: pointer;
 }
 
-footer {
+#p-descricao,
+#p-pre-venda {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    line-height: 1.6;
+    border-radius: 10px;
+    color: #2c3e50;
     text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    background-color: #ffffffdd;
+}
+
+footer {
     padding: 20px;
     margin-top: 50px;
-}
-
-/* Time tag estilizado */
-time {
-    font-size: 2rem;
-    color: #ff5e00;
-    animation: pulse 1s linear infinite;
-}
-
-@keyframes pulse {
-    50% {
-        opacity: 0.5;
-    }
 }
