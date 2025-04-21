@@ -8,10 +8,15 @@ body {
     background-color: #f4f4f4;
 }
 
+header {
+    background: #2d3e50;
+    padding-bottom: 40px;
+}
+
 h1 {
-    margin: 10px 0 50px;
+    padding-top: 30px;
     text-align: center;
-    color: #2d3e50;
+    color: #fff;
 }
 
 .formulario {
@@ -22,16 +27,17 @@ h1 {
 
 form {
     background-color: white;
-    width: 525px;
-    height: 500px;
+    width: 550px;
+    height: 475px;
     margin: 20px auto;
-    margin-top: 5%;
+    margin-top: 50px;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 10px black;
 }
 
 label {
+    margin-top: 5px;
     display: inline-flex;
     align-items: center;
     color: #2d3e50;
@@ -41,10 +47,12 @@ label {
 
 input,
 textarea {
-    box-sizing: border-box;
-    width: 100%;
-    border-radius: 3px;
-    border: 2px solid #ddd;
+    width: 95%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    background-color: #fdfdfd;
 }
 
 input {
@@ -53,7 +61,7 @@ input {
 }
 
 textarea {
-    height: 120px;
+    height: 100px;
 }
 
 button {
@@ -64,10 +72,10 @@ button {
     border: none;
     border-radius: 5px;
     font-size: 15px;
-    background-color: #3498db;
+    background-color: #2c6185;
     cursor: pointer;
 }
 
 button:hover {
-    background-color: #2980b9;
+    opacity: 0.8;
 }

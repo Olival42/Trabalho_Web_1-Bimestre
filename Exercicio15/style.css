@@ -36,7 +36,6 @@ time {
     font-size: 5rem;
     font-weight: bold;
     height: 100px;
-    overflow: hidden;
     margin-bottom: 50px;
 }
 
@@ -102,11 +101,9 @@ h3,
 
 .carrossel {
     display: flex;
-    overflow: hidden;
     width: 100%;
     max-width: 600px;
     margin: auto;
-    position: relative;
     box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -188,7 +185,6 @@ textarea {
     border-radius: 6px;
     font-size: 1rem;
     background-color: #fdfdfd;
-    transition: border-color 0.3s ease;
 }
 
 button {
@@ -217,10 +213,4 @@ button {
     text-align: center;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     background-color: #ffffffdd;
-}
-
-footer {
-    padding: 20px;
-    margin-top: 50px;
-    font-weight: bold;
 }
