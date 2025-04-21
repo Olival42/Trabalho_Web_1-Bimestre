@@ -1,61 +1,97 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Galeria de Fotos</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 
-    <h1>Galeria de Fotos 📸</h1>
-    <p>Clique em uma imagem para vê-la em tamanho maior.</p>
+    <header>
 
-    <div class="galeria">
-        <figure class="item">
-            <label for="modal-1">
-                <img src="https://wallpapers.com/images/hd/scenic-pictures-mlympjpkiwykity6.jpg" alt="Imagem 1" class="miniatura">
-            </label>
-            <input type="checkbox" id="modal-1" class="modal-toggle">
-            <div class="modal">
-                <label for="modal-1" class="modal-close">✖</label>
-                <img src="https://wallpapers.com/images/hd/scenic-pictures-mlympjpkiwykity6.jpg" alt="Imagem 1" class="modal-conteudo">
-            </div>
-        </figure>
+        <h1>Galeria de Fotos 📸</h1>
+        <p>Clique em uma imagem para vê-la em tamanho maior.</p>
 
-        <figure class="item">
-            <label for="modal-2">
-                <img src="https://www.adrenaline.com.br/wp-content/uploads/2024/09/GTA-6-em-4K-e-60-FPS-no-PS5-Pro-e-improvavel-afirma-analista.jpg" alt="Imagem 2" class="miniatura">
-            </label>
-            <input type="checkbox" id="modal-2" class="modal-toggle">
-            <div class="modal">
-                <label for="modal-2" class="modal-close">✖</label>
-                <img src="https://www.adrenaline.com.br/wp-content/uploads/2024/09/GTA-6-em-4K-e-60-FPS-no-PS5-Pro-e-improvavel-afirma-analista.jpg" alt="Imagem 2" class="modal-conteudo">
-            </div>
-        </figure>
+    </header>
 
-        <figure class="item">
-            <label for="modal-3">
-                <img src="https://assets.ofertorio.com/39/f83ec09569dba2fc911bb94d7486be75.jpg" alt="Imagem 3" class="miniatura">
-            </label>
-            <input type="checkbox" id="modal-3" class="modal-toggle">
-            <div class="modal">
-                <label for="modal-3" class="modal-close">✖</label>
-                <img src="https://assets.ofertorio.com/39/f83ec09569dba2fc911bb94d7486be75.jpg" alt="Imagem 3" class="modal-conteudo">
-            </div>
-        </figure>
+    <div class="central">
+        <div class="galeria">
+            <figure class="item">
+                <label for="modal-1">
+                    <img src="https://wallpapers.com/images/hd/scenic-pictures-mlympjpkiwykity6.jpg" alt="Imagem 1"
+                        class="miniatura">
+                </label>
+                <input type="checkbox" id="modal-1" class="modal-toggle">
+                <div class="modal">
+                    <label for="modal-1" class="modal-close">✖</label>
+                    <img src="https://wallpapers.com/images/hd/scenic-pictures-mlympjpkiwykity6.jpg" alt="Imagem 1"
+                        class="modal-conteudo">
+                </div>
+            </figure>
 
-        <figure class="item">
-            <label for="modal-4">
-                <img src="https://a.eu.mktgcdn.com/f/100004519/xLeVc5XahQ14O2-lWv6n8JjqE1V8AAUSeyRHIiFfamQ.jpg" alt="Imagem 4" class="miniatura">
-            </label>
-            <input type="checkbox" id="modal-4" class="modal-toggle">
-            <div class="modal">
-                <label for="modal-4" class="modal-close">✖</label>
-                <img src="https://a.eu.mktgcdn.com/f/100004519/xLeVc5XahQ14O2-lWv6n8JjqE1V8AAUSeyRHIiFfamQ.jpg" alt="Imagem 4" class="modal-conteudo">
-            </div>
-        </figure>
+            <figure class="item">
+                <label for="modal-2">
+                    <img src="https://www.adrenaline.com.br/wp-content/uploads/2024/09/GTA-6-em-4K-e-60-FPS-no-PS5-Pro-e-improvavel-afirma-analista.jpg"
+                        alt="Imagem 2" class="miniatura">
+                </label>
+                <input type="checkbox" id="modal-2" class="modal-toggle">
+                <div class="modal">
+                    <label for="modal-2" class="modal-close">✖</label>
+                    <img src="https://www.adrenaline.com.br/wp-content/uploads/2024/09/GTA-6-em-4K-e-60-FPS-no-PS5-Pro-e-improvavel-afirma-analista.jpg"
+                        alt="Imagem 2" class="modal-conteudo">
+                </div>
+            </figure>
+
+            <figure class="item">
+                <label for="modal-3">
+                    <img src="https://assets.ofertorio.com/39/f83ec09569dba2fc911bb94d7486be75.jpg" alt="Imagem 3"
+                        class="miniatura">
+                </label>
+                <input type="checkbox" id="modal-3" class="modal-toggle">
+                <div class="modal">
+                    <label for="modal-3" class="modal-close">✖</label>
+                    <img src="https://assets.ofertorio.com/39/f83ec09569dba2fc911bb94d7486be75.jpg" alt="Imagem 3"
+                        class="modal-conteudo">
+                </div>
+            </figure>
+
+            <figure class="item">
+                <label for="modal-4">
+                    <img src="https://a.eu.mktgcdn.com/f/100004519/xLeVc5XahQ14O2-lWv6n8JjqE1V8AAUSeyRHIiFfamQ.jpg"
+                        alt="Imagem 4" class="miniatura">
+                </label>
+                <input type="checkbox" id="modal-4" class="modal-toggle">
+                <div class="modal">
+                    <label for="modal-4" class="modal-close">✖</label>
+                    <img src="https://a.eu.mktgcdn.com/f/100004519/xLeVc5XahQ14O2-lWv6n8JjqE1V8AAUSeyRHIiFfamQ.jpg"
+                        alt="Imagem 4" class="modal-conteudo">
+                </div>
+            </figure>
+        </div>
+    </div>
+
+    <!-- Gatilho -->
+    <input type="checkbox" id="menu-toggle">
+
+    <!-- Overlay (fundo que fecha o menu ao clicar) -->
+    <label for="menu-toggle" class="overlay"></label>
+
+    <!-- Botão para abrir -->
+    <label for="menu-toggle" class="menu-icon">☰ Menu</label>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h2>Menu Lateral</h2>
+        <ul>
+            <li><a href="../Exercicio1/index.html">Exercicio 1</a></li>
+            <li><a href="../exercicio2/index.html">Exercicio 2</a></li>
+            <li><a href="../Exercicio3/index.html">Exercicio 3</a></li>
+        </ul>
     </div>
 
 </body>
+
 </html>
