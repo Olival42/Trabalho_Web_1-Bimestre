@@ -1,0 +1,98 @@
+/* Reset e base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: #fff;
+  background-color: #f0f2f5;
+}
+
+/* Header */
+header {
+  background: #2d3e50;
+  text-align: center;
+  padding: 50px 20px 20px;
+  margin-bottom: 20px;
+}
+
+header h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 1.2rem;
+}
+
+/* FAQ Section */
+.faq {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #ffffffee;
+  border-radius: 10px;
+  color: #2c3e50;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Cada pergunta */
+details {
+  background: #fff;
+  border-left: 5px solid #2c6185;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  padding: 15px 20px;
+  transition: all 0.3s ease;
+}
+
+summary {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #2c6185;
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+summary::before {
+  content: "▶";
+  margin-right: 10px;
+  transition: transform 0.3s ease;
+}
+
+details[open] summary::before {
+  transform: rotate(90deg);
+}
+
+/* Conteúdo da resposta com transição */
+.content {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.5s ease;
+}
+
+details[open] .content {
+  max-height: 200px; /* valor suficiente para expandir o conteúdo */
+  margin-top: 10px;
+}
+
+.content p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #2c3e50;
+}
+
+/* Footer */
+footer {
+  background: #2d3e50;
+  text-align: center;
+  padding: 20px;
+  margin-top: 50px;
+  font-weight: bold;
+  color: #fff;
+}

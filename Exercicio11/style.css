@@ -1,0 +1,93 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to right, #eef2f3, #d9e4ec);
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 50px auto;
+    background: white;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+  }
+  
+  .tree {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .tree li {
+    margin-bottom: 1rem;
+  }
+  
+ 
+  .tree input[type="checkbox"] {
+    display: none;
+  }
+  
+
+  .tree label {
+    cursor: pointer;
+    font-weight: 600;
+    background: #2575fc;
+    color: white;
+    padding: 0.4rem 0.8rem;
+    border-radius: 8px;
+    display: inline-block;
+    transition: background 0.3s;
+  }
+  
+  .tree label:hover {
+    background: #1a5ed6;
+  }
+  
+
+  .tree ul {
+    display: none;
+    margin-top: 0.5rem;
+    padding-left: 1.5rem;
+  }
+  
+
+  .tree input:checked + label + ul {
+    display: block;
+  }
+  
+
+  .tree a {
+    text-decoration: none;
+    color: #444;
+    font-weight: 500;
+    padding: 0.4rem 0.8rem;
+    display: inline-block;
+    transition: background 0.2s;
+    border-radius: 6px;
+  }
+  
+  .tree a:hover {
+    background: #e6f0ff;
+  }
+  
+
+  .tree ul li {
+    text-indent: 1rem;
+    position: relative;
+  }
+  
+  .tree ul li::before {
+    content: "└─ ";
+    position: absolute;
+    left: 0;
+    color: #aaa;
+  }
+  
+  

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Lista de Tarefas</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Lista de Tarefas</h1>
+    <p>Organize suas tarefas do dia</p>
+  </header>
+
+  <main class="todo-container">
+    <form>
+      <input type="text" placeholder="Digite uma nova tarefa..." disabled>
+      <button type="submit" disabled>Adicionar</button>
+    </form>
+
+    <ul class="task-list">
+      <li>
+        <label class="task-label">
+          <input type="checkbox">
+          <span>Estudar HTML e CSS</span>
+        </label>
+        <div class="task-actions">
+          <button disabled>Editar</button>
+          <button disabled>Excluir</button>
+        </div>
+      </li>
+      <li>
+        <label class="task-label">
+          <input type="checkbox">
+          <span>Fazer exercícios práticos</span>
+        </label>
+        <div class="task-actions">
+          <button disabled>Editar</button>
+          <button disabled>Excluir</button>
+        </div>
+      </li>
+    </ul>
+  </main>
+
+  <footer>
+    &copy; 2025 - Todos os direitos reservados
+  </footer>
+</body>
+</html>

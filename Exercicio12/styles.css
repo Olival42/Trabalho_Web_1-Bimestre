@@ -1,0 +1,237 @@
+* {
+
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+header {
+  background-color: #2d3e50;
+  margin-bottom: 20px;
+  padding: 50px 20px 100px;
+
+}
+
+/* Estilos gerais */
+body {
+  font-family: Poppins, sans-serif;
+  background-color: #f4f4f9;
+  color: #2c3e50;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+
+}
+
+.central {
+  padding: 20px;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-top: 25px;
+  color: #ffffff;
+}
+
+
+/* Galeria */
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 15px;
+  justify-items: center;
+  margin-top: 20px;
+  max-width: 1000px;
+  width: 100%;
+
+}
+
+/* Miniaturas das imagens */
+.miniatura {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Efeito de expandir a imagem */
+.miniatura:hover {
+  transform: scale(1.05);
+}
+
+/* Estilo do Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+}
+
+/* Exibição do Modal ao clicar na imagem */
+.modal-toggle:checked+.modal {
+  display: flex;
+}
+
+/* Modal conteúdo (imagem ampliada) */
+.modal-conteudo {
+  max-width: 80%;
+  max-height: 80%;
+  border-radius: 10px;
+}
+
+/* Fechar o modal com o 'X' */
+.modal-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 20px;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+/* Efeito ao passar o mouse sobre o botão de fechar */
+.modal-close:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Evitar que o clique na imagem (dentro do modal) feche a tela */
+.modal-conteudo:hover {
+  pointer-events: auto;
+}
+
+/* Faz a galeria centralizar as imagens */
+.item {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Estilo para o título e parágrafo */
+p {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* Estilo para o checkbox escondido que controla o modal */
+.modal-toggle {
+  display: none;
+}
+
+/* Aumentando a área de clique para fechar (clicar no fundo do modal) */
+.modal {
+  cursor: pointer;
+}
+
+/* Oculta o checkbox */
+#menu-toggle {
+  display: none;
+}
+
+/* Overlay (fundo que fecha o menu ao clicar) */
+.overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+  cursor: pointer;
+}
+
+/* Mostra o overlay quando o menu estiver aberto */
+#menu-toggle:checked~.overlay {
+  display: block;
+}
+
+/* Botão para abrir a sidebar */
+.menu-icon {
+  padding: 1rem;
+
+  color: white;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 2;
+  border-radius: 8px;
+  transition: opacity 0.3s ease;
+  font-size: 1.2rem;
+}
+
+/* Some com o botão quando o menu estiver aberto */
+#menu-toggle:checked~.menu-icon {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -280px;
+  width: 280px;
+  height: 100%;
+  background: linear-gradient(135deg, #2d3e50, #13467c);
+  color: white;
+  padding: 2rem 1.5rem;
+  transition: left 0.4s ease;
+  box-shadow: 3px 0 10px rgba(0, 0, 0, 0.2);
+  z-index: 3;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+/* Sidebar visível */
+#menu-toggle:checked~.sidebar {
+  left: 0;
+}
+
+.sidebar h2 {
+  margin-top: 0;
+  font-size: 1.8rem;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 2rem;
+}
+
+.sidebar li {
+  margin-bottom: 1.2rem;
+}
+
+.sidebar a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: text-shadow 0.2s ease;
+}
+
+.sidebar a:hover {
+  text-shadow: 0 0 5px white;
+}
