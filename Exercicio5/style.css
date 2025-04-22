@@ -29,8 +29,7 @@ form {
     background-color: white;
     width: 550px;
     height: 475px;
-    margin: 20px auto;
-    margin-top: 50px;
+    margin: 50px auto 20px;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 10px black;
@@ -74,6 +73,7 @@ button {
     font-size: 15px;
     background-color: #2c6185;
     cursor: pointer;
+    transition: opacity 0.3s;
 }
 
 button:hover {
