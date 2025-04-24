@@ -1,133 +1,231 @@
 /* Reset e base */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: Arial, sans-serif;
-    color: #fff;
-    background-color: #f0f2f5;
-  }
-  
-  /* Header */
-  header {
-    background: #2d3e50;
-    text-align: center;
-    padding: 50px 20px 20px;
-    margin-bottom: 20px;
-  }
-  
-  header h1 {
-    font-size: 3rem;
-    margin-bottom: 10px;
-  }
-  
-  header p {
-    font-size: 1.2rem;
-  }
-  
-  /* Formulário */
-  form {
-    max-width: 400px;
-    margin: 20px auto;
-    display: flex;
-    gap: 10px;
-    padding: 25px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    background-color: #ffffffee;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-  }
-  
-  form input[type="text"] {
-    flex: 1;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    font-size: 1rem;
-    background-color: #fdfdfd;
-    color: #2c3e50;
-  }
-  
-  form input:focus {
-    border-color: #2c6185;
-    outline: none;
-  }
-  
-  button {
-    color: #fff;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 5px;
-    font-size: 1rem;
-    font-weight: bold;
-    background-color: #2c6185;
-    cursor: pointer;
-    transition: opacity 0.3s ease;
-  }
-  
-  button:hover {
-    opacity: 0.8;
-  }
-  
-  /* Lista de tarefas */
-  .todo-container {
-    max-width: 600px;
-    margin: 20px auto;
-    background-color: #ffffffee;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-  }
-  
-  .task-list {
-    list-style: none;
-  }
-  
-  .task-list li {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #fff;
-    color: #2c3e50;
-    padding: 10px;
-    border-radius: 6px;
-    margin-bottom: 10px;
-  }
-  
-  .task-label {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    flex: 1;
-  }
-  
-  .task-label input[type="checkbox"] {
-    width: 18px;
-    height: 18px;
-  }
-  
-  .task-label input[type="checkbox"]:checked + span {
-    text-decoration: line-through;
-    color: #888;
-  }
-  
-  .task-actions button {
-    margin-left: 5px;
-    padding: 6px 10px;
-    font-size: 0.8rem;
-    background-color: #888;
-    cursor: not-allowed;
-  }
-  
-  /* Footer */
-  footer {
-    background: #2d3e50;
-    text-align: center;
-    padding: 20px;
-    margin-top: 50px;
-    font-weight: bold;
-  }
-  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: #fff;
+  background-color: #f0f2f5;
+}
+
+/* Header */
+header {
+  background: #2d3e50;
+  text-align: center;
+  padding: 50px 20px 20px;
+  margin-bottom: 20px;
+}
+
+header h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 1.2rem;
+}
+
+/* Formulário */
+form {
+  max-width: 400px;
+  margin: 20px auto;
+  display: flex;
+  gap: 10px;
+  padding: 25px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #ffffffee;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+form input[type="text"] {
+  flex: 1;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  background-color: #fdfdfd;
+  color: #2c3e50;
+}
+
+form input:focus {
+  border-color: #2c6185;
+  outline: none;
+}
+
+button {
+  color: #fff;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: #2c6185;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+/* Lista de tarefas */
+.todo-container {
+  max-width: 600px;
+  margin: 20px auto;
+  background-color: #ffffffee;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.task-list {
+  list-style: none;
+}
+
+.task-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  color: #2c3e50;
+  padding: 10px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+.task-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+}
+
+.task-label input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+}
+
+.task-label input[type="checkbox"]:checked+span {
+  text-decoration: line-through;
+  color: #888;
+}
+
+.task-actions button {
+  margin-left: 5px;
+  padding: 6px 10px;
+  font-size: 0.8rem;
+  background-color: #888;
+  cursor: not-allowed;
+}
+
+/* Footer */
+footer {
+  background: #2d3e50;
+  text-align: center;
+  padding: 20px;
+  margin-top: 50px;
+  font-weight: bold;
+}
+
+/* Estilo para o checkbox escondido que controla o modal */
+.modal-toggle {
+  display: none;
+}
+
+/* Aumentando a área de clique para fechar (clicar no fundo do modal) */
+.modal {
+  cursor: pointer;
+}
+
+/* Oculta o checkbox */
+#menu-toggle {
+  display: none;
+}
+
+/* Overlay (fundo que fecha o menu ao clicar) */
+.overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+  cursor: pointer;
+}
+
+/* Mostra o overlay quando o menu estiver aberto */
+#menu-toggle:checked~.overlay {
+  display: block;
+}
+
+/* Botão para abrir a sidebar */
+.menu-icon {
+  padding: 1rem;
+
+  color: white;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 2;
+  border-radius: 8px;
+  transition: opacity 0.3s ease;
+  font-size: 1.2rem;
+}
+
+/* Some com o botão quando o menu estiver aberto */
+#menu-toggle:checked~.menu-icon {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -280px;
+  width: 280px;
+  height: 100%;
+  background: linear-gradient(135deg, #2d3e50, #13467c);
+  color: white;
+  padding: 2rem 1.5rem;
+  transition: left 0.4s ease;
+  box-shadow: 3px 0 10px rgba(0, 0, 0, 0.2);
+  z-index: 3;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+/* Sidebar visível */
+#menu-toggle:checked~.sidebar {
+  left: 0;
+}
+
+.sidebar h2 {
+  margin-top: 0;
+  font-size: 1.8rem;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 2rem;
+}
+
+.sidebar li {
+  margin-bottom: 1.2rem;
+}
+
+.sidebar a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: text-shadow 0.2s ease;
+}
+
+.sidebar a:hover {
+  text-shadow: 0 0 5px white;
+}
