@@ -1,13 +1,19 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .products {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 20px;
-  
+
   max-width: 1000px;
   margin: 0 auto;
   padding: 30px 20px;
   background-color: #ffffff;
-  
+
 }
 
 
@@ -117,14 +123,14 @@ header p.header-subtitle {
 }
 
 /* Mostra o overlay quando o menu estiver aberto */
-#menu-toggle:checked ~ .overlay {
+#menu-toggle:checked~.overlay {
   display: block;
 }
 
 /* Botão para abrir a sidebar */
 .menu-icon {
   padding: 1rem;
-  
+
   color: white;
   cursor: pointer;
   position: absolute;
@@ -137,7 +143,7 @@ header p.header-subtitle {
 }
 
 /* Some com o botão quando o menu estiver aberto */
-#menu-toggle:checked ~ .menu-icon {
+#menu-toggle:checked~.menu-icon {
   opacity: 0;
   pointer-events: none;
 }
@@ -148,7 +154,7 @@ header p.header-subtitle {
   top: 0;
   left: -280px;
   height: 100%;
-  background: linear-gradient(135deg,#2d3e50, #13467c );
+  background: linear-gradient(135deg, #2d3e50, #13467c);
   color: white;
   padding: 2rem 1.5rem;
   transition: left 0.4s ease;
@@ -159,7 +165,7 @@ header p.header-subtitle {
 }
 
 /* Sidebar visível */
-#menu-toggle:checked ~ .sidebar {
+#menu-toggle:checked~.sidebar {
   left: 0;
 }
 

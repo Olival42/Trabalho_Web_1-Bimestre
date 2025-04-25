@@ -139,7 +139,6 @@ section ul li a:hover {
     position: fixed;
     top: 0;
     left: -280px;
-    width: 280px;
     height: 100%;
     background: linear-gradient(135deg, #2d3e50, #13467c);
     color: white;
