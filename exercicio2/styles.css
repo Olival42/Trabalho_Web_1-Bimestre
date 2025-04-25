@@ -1,81 +1,165 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: Arial, sans-serif;
-    color: #fff;
-    background-color: #f0f2f5;
-  }
-  
-  /* Cabeçalho */
-  header {
-    background: #2d3e50;
-    text-align: center;
-    padding: 50px 20px 20px;
-    margin-bottom: 20px;
-  }
-  
-  header h1 {
-    font-size: 3rem;
-    margin-bottom: 10px;
-  }
-  
-  header p {
-    font-size: 1.2rem;
-  }
-  
-  /* Conteúdo do perfil */
-  .perfil-container {
-    max-width: 500px;
-    margin: 40px auto;
-    padding: 30px;
-    text-align: center;
-    background-color: #ffffffee;
-    border-radius: 10px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-    color: #2c3e50;
-  }
-  
-  .foto-perfil {
-    width: 300px; /* Dobrado de 150px */
-    height: 300px; /* Dobrado de 150px */
-    object-fit: cover;
-    border-radius: 50%;
-    margin-bottom: 20px;
-    border: 3px solid #2c6185;
-  }
-  .perfil-container h2 {
-    font-size: 2rem;
-    margin-bottom: 10px;
-  }
-  
-  .perfil-container p {
-    font-size: 1.1rem;
-    margin-bottom: 20px;
-  }
-  
-  /* Redes sociais */
-  .redes-sociais a {
-    display: inline-block;
-    margin: 0 10px;
-    color: #2c6185;
-    text-decoration: none;
-    font-weight: bold;
-    transition: opacity 0.3s ease;
-  }
-  
-  .redes-sociais a:hover {
-    opacity: 0.8;
-  }
-  
-  /* Rodapé */
-  footer {
-    background: #2d3e50;
-    text-align: center;
-    padding: 20px;
-    margin-top: 50px;
-    font-weight: bold;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: #fff;
+  background-color: #f0f2f5;
+}
+
+/* Cabeçalho */
+header {
+  background: #2d3e50;
+  text-align: center;
+  padding: 50px 20px 20px;
+  margin-bottom: 20px;
+}
+
+header h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 1.2rem;
+}
+
+/* Conteúdo do perfil */
+.perfil-container {
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 30px;
+  text-align: center;
+  background-color: #ffffffee;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  color: #2c3e50;
+}
+
+.foto-perfil {
+  width: 300px;
+  /* Dobrado de 150px */
+  height: 300px;
+  /* Dobrado de 150px */
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  border: 3px solid #2c6185;
+}
+
+.perfil-container h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.perfil-container p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+/* Redes sociais */
+.redes-sociais a {
+  display: inline-block;
+  margin: 0 10px;
+  color: #2c6185;
+  text-decoration: none;
+  font-weight: bold;
+  transition: opacity 0.3s ease;
+}
+
+.redes-sociais a:hover {
+  opacity: 0.8;
+}
+
+/* Oculta o checkbox */
+#menu-toggle {
+  display: none;
+}
+
+/* Overlay (fundo que fecha o menu ao clicar) */
+.overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+  cursor: pointer;
+}
+
+/* Mostra o overlay quando o menu estiver aberto */
+#menu-toggle:checked~.overlay {
+  display: block;
+}
+
+/* Botão para abrir a sidebar */
+.menu-icon {
+  padding: 1rem;
+
+  color: white;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 2;
+  border-radius: 8px;
+  transition: opacity 0.3s ease;
+  font-size: 1.2rem;
+}
+
+/* Some com o botão quando o menu estiver aberto */
+#menu-toggle:checked~.menu-icon {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -280px;
+  width: 280px;
+  height: 100%;
+  background: linear-gradient(135deg, #2d3e50, #13467c);
+  color: white;
+  padding: 2rem 1.5rem;
+  transition: left 0.4s ease;
+  box-shadow: 3px 0 10px rgba(0, 0, 0, 0.2);
+  z-index: 3;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+/* Sidebar visível */
+#menu-toggle:checked~.sidebar {
+  left: 0;
+}
+
+
+.sidebar h2 {
+  margin-top: 0;
+  font-size: 1.8rem;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 2rem;
+}
+
+.sidebar li {
+  margin-bottom: 1.2rem;
+}
+
+.sidebar a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: text-shadow 0.2s ease;
+}
+
+.sidebar a:hover {
+  text-shadow: 0 0 5px white;
+}

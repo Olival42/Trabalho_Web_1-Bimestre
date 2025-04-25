@@ -91,3 +91,94 @@ section ul li a {
 section ul li a:hover {
     text-decoration: underline;
 }
+
+
+/* Oculta o checkbox */
+#menu-toggle {
+    display: none;
+}
+
+/* Overlay (fundo que fecha o menu ao clicar) */
+.overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+    cursor: pointer;
+}
+
+/* Mostra o overlay quando o menu estiver aberto */
+#menu-toggle:checked~.overlay {
+    display: block;
+}
+
+/* Botão para abrir a sidebar */
+.menu-icon {
+    padding: 1rem;
+
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 2;
+    border-radius: 8px;
+    transition: opacity 0.3s ease;
+    font-size: 1.2rem;
+}
+
+/* Some com o botão quando o menu estiver aberto */
+#menu-toggle:checked~.menu-icon {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -280px;
+    width: 280px;
+    height: 100%;
+    background: linear-gradient(135deg, #2d3e50, #13467c);
+    color: white;
+    padding: 2rem 1.5rem;
+    transition: left 0.4s ease;
+    box-shadow: 3px 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 3;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+/* Sidebar visível */
+#menu-toggle:checked~.sidebar {
+    left: 0;
+}
+
+
+.sidebar h2 {
+    margin-top: 0;
+    font-size: 1.8rem;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 2rem;
+}
+
+.sidebar li {
+    margin-bottom: 1.2rem;
+}
+
+.sidebar a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: text-shadow 0.2s ease;
+}
+
+.sidebar a:hover {
+    text-shadow: 0 0 5px white;
+}
