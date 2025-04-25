@@ -10,7 +10,6 @@ body {
   font-family: Arial, sans-serif;
   color: #fff;
   background-color: #f0f2f5;
-  display: flex;
   flex-direction: column;
   height: 100%;
 }
@@ -52,7 +51,6 @@ form {
 
 /* Campos de entrada */
 input {
-  width: 100%;
   padding: 12px;
   border: 1px solid #ccc;
   /* <- aqui está a propriedade 'border' */
@@ -87,14 +85,6 @@ button:hover {
   opacity: 0.8;
 }
 
-/* Footer */
-footer {
-  background: #2d3e50;
-  text-align: center;
-  padding: 20px;
-  margin-top: 50px;
-  font-weight: bold;
-}
 
 
 

@@ -114,15 +114,7 @@ header p.header-subtitle {
   /* Cor da legenda alterada para branco */
 }
 
-footer {
-  background: #2d3e50;
-  text-align: center;
-  padding: 20px;
-  margin-top: 50px;
-  font-weight: bold;
-  color: #ffffff;
-  /* Cor do texto alterada para branco */
-}
+
 
 #menu-toggle {
   display: none;
