@@ -1,64 +1,199 @@
-/* Produtos */
 .products {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px;
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 30px 20px;
-  }
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
   
-  .product-card {
-    background-color: #ffffffee;
-    color: #2c3e50;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-    text-align: center;
-    transition: transform 0.3s ease;
-  }
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 30px 20px;
+  background-color: #ffffff;
   
-  .product-card:hover {
-    transform: translateY(-5px);
-  }
+}
+
+
+body {
+  font-family: Arial, sans-serif;
+  color: #fff;
+  background-color: #f0f2f5;
+}
+
+.products-title {
+  text-align: center;
+  color: #ffffff;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.product-card {
+  background-color: #2d3e50;
+  color: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  transition: transform 0.3s ease;
+  margin-bottom: 20px;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.product-card img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 10px;
+  /* Bordas arredondadas na imagem */
+  margin-bottom: 15px;
+}
+
+.product-card h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.product-card p {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.product-card .price {
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  color: #ffffff;
+}
+
+.product-card button {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: #2c6185;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+  box-sizing: border-box;
+  /* Adicionando a propriedade box-sizing */
+}
+
+.product-card button:hover {
+  opacity: 0.8;
+}
+
+header {
+  background: #2d3e50;
+  text-align: center;
+  padding: 50px 20px 20px;
+  margin-bottom: 20px;
+}
+
+header h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+header p.header-subtitle {
+  color: #ffffff;
+}
+
+footer {
+  background: #2d3e50;
+  text-align: center;
+  padding: 20px;
+  margin-top: 50px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+/* Overlay (fundo que fecha o menu ao clicar) */
+.overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+  cursor: pointer;
+}
+
+/* Mostra o overlay quando o menu estiver aberto */
+#menu-toggle:checked ~ .overlay {
+  display: block;
+}
+
+/* Botão para abrir a sidebar */
+.menu-icon {
+  padding: 1rem;
   
-  .product-card img {
-    width: 100%;
-    max-width: 300px;
-    border-radius: 8px;
-    margin-bottom: 15px;
-  }
-  
-  .product-card h2 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-  }
-  
-  .product-card p {
-    font-size: 1rem;
-    margin-bottom: 10px;
-  }
-  
-  .product-card .price {
-    font-weight: bold;
-    font-size: 1.2rem;
-    margin-bottom: 15px;
-    color: #2c6185;
-  }
-  
-  .product-card button {
-    box-sizing: border-box;
-    padding: 12px 25px;
-    font-size: 1rem;
-    background-color: #2c6185;
-    color: #fff;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: opacity 0.3s ease;
-  }
-  
-  .product-card button:hover {
-    opacity: 0.8;
-  }
-  
+  color: white;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 2;
+  border-radius: 8px;
+  transition: opacity 0.3s ease;
+  font-size: 1.2rem;
+}
+
+/* Some com o botão quando o menu estiver aberto */
+#menu-toggle:checked ~ .menu-icon {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -280px;
+  height: 100%;
+  background: linear-gradient(135deg,#2d3e50, #13467c );
+  color: white;
+  padding: 2rem 1.5rem;
+  transition: left 0.4s ease;
+  box-shadow: 3px 0 10px rgba(0, 0, 0, 0.2);
+  z-index: 3;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+/* Sidebar visível */
+#menu-toggle:checked ~ .sidebar {
+  left: 0;
+}
+
+.sidebar h2 {
+  margin-top: 0;
+  font-size: 1.8rem;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 2rem;
+}
+
+.sidebar li {
+  margin-bottom: 1.2rem;
+}
+
+.sidebar a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: text-shadow 0.2s ease;
+}
+
+.sidebar a:hover {
+  text-shadow: 0 0 5px white;
+}
