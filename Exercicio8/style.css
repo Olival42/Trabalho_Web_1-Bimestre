@@ -1,14 +1,13 @@
-/* Produtos */
 .products {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 20px;
-  /* Distância entre os quadrados dos produtos */
+  
   max-width: 1000px;
   margin: 0 auto;
   padding: 30px 20px;
   background-color: #ffffff;
-  /* Cor de fundo alterada */
+  
 }
 
 
@@ -18,28 +17,22 @@ body {
   background-color: #f0f2f5;
 }
 
-/* Título da seção de produtos */
 .products-title {
   text-align: center;
   color: #ffffff;
-  /* Cor do texto alterada para branco */
   font-size: 2.5rem;
   margin-bottom: 20px;
 }
 
 .product-card {
   background-color: #2d3e50;
-  /* Mudando a cor de fundo para branco */
   color: #ffffff;
-  /* Mudando a cor do texto para garantir contraste */
   border-radius: 12px;
-  /* Aumentando a borda arredondada */
   padding: 20px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
   text-align: center;
   transition: transform 0.3s ease;
   margin-bottom: 20px;
-  /* Garantir que haja espaçamento entre os cartões */
 }
 
 .product-card:hover {
@@ -58,14 +51,12 @@ body {
   font-size: 1.5rem;
   margin-bottom: 10px;
   color: #ffffff;
-  /* Cor do título alterada para escuro, para contraste */
 }
 
 .product-card p {
   font-size: 1rem;
   margin-bottom: 10px;
   color: #ffffff;
-  /* Cor do texto alterada para escuro, para contraste */
 }
 
 .product-card .price {
@@ -73,7 +64,6 @@ body {
   font-size: 1.2rem;
   margin-bottom: 15px;
   color: #ffffff;
-  /* Cor do preço alterada para escuro, para contraste */
 }
 
 .product-card button {
@@ -106,12 +96,10 @@ header h1 {
   font-size: 3rem;
   margin-bottom: 10px;
   color: #ffffff;
-  /* Cor do título alterada para branco */
 }
 
 header p.header-subtitle {
   color: #ffffff;
-  /* Cor da legenda alterada para branco */
 }
 
 footer {
@@ -121,7 +109,6 @@ footer {
   margin-top: 50px;
   font-weight: bold;
   color: #ffffff;
-  /* Cor do texto alterada para branco */
 }
 
 #menu-toggle {
